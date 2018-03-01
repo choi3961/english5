@@ -1,0 +1,485 @@
+/* This stylesheet document is main style of project2 in Harvard class. */
+
+/* This is the base of total showing body */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+  overflow-y: scroll;
+  margin: 1em;
+  font-size: 16px;
+}
+
+#container{
+
+  margin: 0 auto;
+  width: 990px;
+}
+/*
+	This is for look and feel of the lists.
+*/
+.header02 ul li:hover ul li{
+	width: 90px;
+	height: 20px;
+	display: inline-block;
+	top: 50px;
+	float: left;
+}
+
+/*
+	This is for subpart of the head part.
+*/
+.header02 ul li ul{
+	position: absolute;
+	top: 95px;
+	left: 44px;
+	
+	width:790px;
+}
+
+.header02 ul li ul li{
+	display: none;
+}
+
+/*
+	Head part of the page.
+*/
+.header{
+	height: 50px;
+}
+
+/*
+	Subpart of head part.
+*/
+.header01{
+	margin: 20px auto;
+	text-align: center;
+	background-color: #BCCAB9;
+	font-size: 40px;
+	border: 1px solid #cccccc;
+}
+
+.header01:hover{
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/*
+	Subpart of head part.
+*/
+.header02{
+	font-size: 21px;
+	margin: 9px auto;
+	width: 813px;
+	height: 50px;
+	left: 150px;
+	
+	display: block;
+}
+
+/*
+	Subpart of head part.
+*/
+.header03{
+	width: 400px;
+	text-align: center;
+	margin: 20px auto;
+	font-size: 30px;
+	clear: both;
+}
+
+/*
+	This is for lists of head part.
+*/
+.header02 ul{
+	margin: 0px 0px 0px 15px;
+	padding: 7px;
+}
+
+/*
+	This is the lists of head part.
+*/
+.header02 ul li{
+	width: 97px;
+	float: left;
+	padding: 0;
+	list-style: none;
+}
+
+/*
+	This is the top part style of the page.
+*/
+#menu0{
+	width: 897px;
+	margin: auto;
+	height: 40px;
+	font-size: 19px;
+
+}
+
+.sidebar{
+	margin: 0px auto;
+  	width: 160px;
+	border: 1px solid #cccccc;
+}
+
+#left_side{
+  	float: left;
+	border: 1px solid #cccccc;
+}
+
+#right_side{
+  float: right;
+}
+
+#contents{
+
+  margin: 0 auto;
+  width: 650px;
+  padding-right: 120px;
+  padding-left: 120px;	
+}
+
+/*
+	This is the top part style of the page.
+*/
+#menu{
+	margin: auto;
+	height: 30px;
+	font-size: 16px;
+	text-indent: 9px;
+
+}
+
+.video_pannel{
+
+}
+
+.guts{ 
+	
+	//width:700px; 
+	font-size: 17px;
+	border-style: inset;
+	border-width:5px;
+	border-color: #aaccaa;
+
+	//padding-right: 300px;
+	//padding-left: 155px;
+
+  	//margin: 0 auto;		
+	
+}
+
+.trade-mark{
+
+	//width: 700px;
+	margin:auto;
+	text-align: left;
+	text-indent: 9px;
+	font-size: 39px;
+}
+.trade-mark:hover{
+	color: red;
+}
+
+.header{
+
+	width: 700px;
+	margin:auto;
+	text-align: center;
+	font-size: 39px;
+}
+
+.greetings{
+	float: right;
+}
+
+.center{
+	margin: 0px auto; 
+	padding: 19px;
+	width: 500px;
+}
+
+.cen-cen{
+	width:300px;
+	margin:auto;
+}
+
+.form-standard{
+	margin-left:1px;
+}
+
+.form-standard input{
+	width:107px;
+	size: 35;
+	border-radius: 9px;
+	height:21px;
+	border-width: 2px;
+	border-color: #999999;
+}
+
+.form-standard input[type = 'password']{
+	width:107px;
+	height: 21px;
+}
+
+.form-standard input[type = 'submit']{
+	width:90px;
+	height: 30px;
+}
+
+.form-standard input[type]:hover{
+
+}
+
+.form-standard textarea{
+	width: 475px;
+	height: 120px;
+}
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table th, 
+.table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 2px solid #dddddd;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table .table {
+
+}
+
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+
+}
+
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th {
+
+}
+
+.article{
+	margin: 9px 0px 9px 25px;
+	background-color: #dddddd;
+	width: 500px;
+	padding: 0 3px 3px 10px ;
+}
+
+.article-control{
+	display:inline-block;
+}
+
+.article-control input[type='submit']:hover{
+	background-color: gray;
+}
+
+.article-header{
+	font-weight: bold;
+}
+.article-content{
+	text-align: center;
+}
+
+.article-time {
+	font-size: 15px;
+	text-align: right;
+}
+
+.myposts{
+	margin: 9px 9px 9px 19px;
+	background-color: #dddddd;
+	width: 570px;
+	padding: 0 3px 3px 10px ;
+	display:inline-block;
+}
+
+.required{
+	color: red;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	//background-color: #cccccc;
+	font-weight: bold;
+}
+
+.input_style{
+	border-radius: 9px;
+	height:23px;
+	border-width: 3px;
+	border-color: #999999;
+}
+
+.error{
+	color: #ff0000;
+}
+
+
+
+a:link{
+	text-decoration: none;
+}
+
+/*
+	This is for the left part of the page.
+*/
+.lefter{
+	width: 11%;
+	height: 997px;
+	left: 0px;
+	top: 90px;
+	background-color: #EB9FED;
+	position: absolute;
+	text-indent: 5px;
+	padding-top: 10px;
+}
+
+/*
+	This is for the left part lists of the page.
+*/
+.lefter ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+.lefter ul li{
+	list-style-type: none;
+	font-weight: bold;
+	width: 100px;
+	font-size: 23px;
+}
+
+.lefter ul li ul{
+	margin: 0px;
+	text-indent: 10px;
+}
+
+.lefter ul li ul li{
+	font-size: 17px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+/*
+	This is for right part of the page.
+*/
+.righter{
+	width: 11%;
+	height: 1007px;
+	position: absolute;
+	right: 0px;
+	top: 90px;
+	background-color: #CBE810;
+}
+
+.right-menu{
+	font-size: 21px;
+	width: 92px;
+	height: 53px;
+	margin: 3px auto;
+	text-align: center;
+	background-color: #BFC1F5;
+}
+
+/*
+	This styles the contents of the page.
+*/
+.box{
+	width: 79px;
+	height: 80px;
+	border-style: outset;
+	border-width: 2px;
+	float: left;
+	margin: 6px;
+	padding: 5px 2px 2px 2px;
+	text-align: center;
+	background-color: #FA970C;
+}
+
+/*
+	This is for the bottom part of the page.
+*/
+#guts_footer{
+
+	height: 100px;
+	//z-index: 100;
+	//background-color: #BCCAB9;
+
+	text-align: center;
+	font-size: 20px;
+	border: 1px solid #cccccc;	
+}
+
+/*
+	This is for the bottom part of the page.
+*/
+.footer{
+
+	height: 100px;
+	//z-index: 100;
+	background-color: #BCCAB9;
+
+	text-align: center;
+	font-size: 20px;
+	border: 1px solid #cccccc;	
+}
+.sub-footer{
+	width: 790px;
+	margin: 10px auto;
+}
+
+.footer-lefter{
+	text-indent: 10px;
+	float:left;
+}
+
+
+.img{
+	margin : 10px 0 0 5px ;
+	//background-color: gray;
+}
+
+.space{
+	margin : 10px 0 0 0;
+}

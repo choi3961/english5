@@ -1,0 +1,271 @@
+/* This stylesheet document is main style of project2 in Harvard class. */
+
+/* This is the base of total showing body */
+.container02{ 
+	background-color: #aaffaa;
+	width:700px; 
+	margin: 3px auto;
+	font-size: 19px;
+	border-style: inset;
+	border-width:5px;
+	border-color: #aaccaa;
+}
+
+/*
+	This is for the top part of the page.
+*/
+#menu02{
+	background-color:#cccccc;
+	width:700px;
+	margin: auto;
+	text-indent: 9px;
+	font-size: 19px;
+}
+
+/*
+	This is for the trade mark of the page.
+*/
+.trade-mark{
+	background-color: #aaaa33;
+	width: 700px;
+	margin:auto;
+	text-align: left;
+	text-indent: 9px;
+	font-size: 39px;
+}
+.trade-mark:hover{
+	color: red;
+}
+
+/*
+	This is for the head part of the page.
+*/
+.header002{
+	background-color: #aaaa33;
+	width: 700px;
+	margin:auto;
+	text-align: center;
+	font-size: 39px;
+}
+
+/*
+	This is for greeting to the user who is logged in.
+*/
+.greetings{
+	float: right;
+}
+
+/*
+	This is for the body part of the page.
+*/
+.body02{
+	background-color: #77ffa0;
+}
+
+/*
+	This is for the body part of the page.
+*/
+.center02{
+	margin: 0px auto; 
+	padding: 19px;
+	width: 500px;
+	background-color: #ccdfcc;
+	border-radius: 17px;
+	border-width: 9px;
+	border-color: #555555;
+}
+
+/*
+	This is for the body part of the page.
+*/
+.cen-cen{
+	width:300px;
+	margin:auto;
+}
+
+/*
+	This is for the form style of the page.
+*/
+.form-standard{
+	margin-left:9px;
+}
+
+.form-standard input{
+	border-radius: 9px;
+	height:21px;
+	border-width: 3px;
+	border-color: #999999;
+}
+
+.form-standard input[type = 'submit']{
+	width:90px;
+	height: 30px;
+}
+
+.form-standard input[type]:hover{
+	background-color: #cccccc;
+}
+
+.form-standard textarea{
+	width: 475px;
+	height: 120px;
+}
+
+/*
+	This styles the table on the page.
+*/
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+	This styles the table on the page.
+*/
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table th, 
+.table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 2px solid #dddddd;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table .table {
+  background-color: #ffffff;
+}
+
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th {
+  background-color: #f5f5f5;
+}
+
+/*
+	This is for the posts on the page.
+*/
+.article{
+	margin: 9px 9px 9px 19px;
+	background-color: #dddddd;
+	width: 650px;
+	padding: 0 3px 3px 10px ;
+}
+
+/*
+
+*/
+.article-control{
+	display:inline-block;
+}
+
+/*
+	This is for the posts on the page.
+*/
+.article-control input[type='submit']:hover{
+	background-color: gray;
+}
+
+.article-header{
+	font-weight: bold;
+}
+.article-content{
+	text-align: center;
+}
+
+.article-time {
+	font-size: 15px;
+	text-align: right;
+}
+
+.myposts{
+	margin: 9px 9px 9px 19px;
+	background-color: #dddddd;
+	width: 570px;
+	padding: 0 3px 3px 10px ;
+	display:inline-block;
+}
+
+/*
+	This is for the input of the form required.
+*/
+.required{
+	color: red;
+}
+
+/*
+	This is for the bottom part of the page.
+*/
+.footer02{
+	background-color: #aaaa33;
+	width: 700px;
+	margin:auto;
+	text-align: center;
+	font-size: 20px;	
+	height:50px;
+}
+
+/*
+	This is for the bottom part of the page.
+*/
+.footer-lefter{
+	text-indent: 10px;
+	float:left;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	background-color: #cccccc;
+	font-weight: bold;
+}
+
+/*
+	This is for the input style of the form on the page.
+*/
+.input_style{
+	border-radius: 9px;
+	height:23px;
+	border-width: 3px;
+	border-color: #999999;
+}
+
+/*
+	This is for the error message.
+*/
+.error{
+	color: #ff0000;
+}
