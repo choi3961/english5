@@ -197,33 +197,27 @@ body {
 	float: right;
 }
 
-.center{
-	margin: 0px auto; 
-	padding: 19px;
-	width: 500px;
-}
-
-.cen-cen{
-	width:300px;
-	margin:auto;
-}
-
+/*
+	This is for the form style of the page.
+*/
 .form-standard{
-	margin-left:1px;
+	margin-left:0px;
 }
 
 .form-standard input{
-	width:107px;
-	size: 35;
+	width:137px;	
+	height:21px;		
 	border-radius: 9px;
-	height:21px;
 	border-width: 2px;
 	border-color: #999999;
 }
 
-.form-standard input[type = 'password']{
-	width:107px;
-	height: 21px;
+.form-standard input[type ='text']{
+	width:137px;	
+	height:21px;		
+	border-radius: 9px;
+	border-width: 2px;
+	border-color: #999999;
 }
 
 .form-standard input[type = 'submit']{
@@ -232,7 +226,7 @@ body {
 }
 
 .form-standard input[type]:hover{
-
+	background-color: #cccccc;
 }
 
 .form-standard textarea{
@@ -240,11 +234,48 @@ body {
 	height: 120px;
 }
 
-table {
-  max-width: 100%;
-  background-color: transparent;
+/*
+	This is for the input of the form required.
+*/
+.required{
+	color: red;
+}
+
+/*
+	This is for the input style of the form on the page.
+*/
+.input_style{
+	border-radius: 9px;
+	height:23px;
+	border-width: 3px;
+	border-color: #999999;
+}
+
+.center{
+	margin: 0 auto; 
+	padding: 19px;
+	width: 500px;
+	//background-color: gray;
+}
+
+.center02{
+	margin: 0 auto; 
+	padding: 9px;
+	//width: 500px;
+	//background-color: gray;
+}
+
+.cen-cen{
+	width:300px;
+	margin:auto;
+}
+
+#lecture_list {
+	width : 100%;
+  //background-color : gray;
   border-collapse: collapse;
   border-spacing: 0;
+  font-size: 14px;
 }
 
 .table {
@@ -252,10 +283,9 @@ table {
   margin-bottom: 20px;
 }
 
-.table th, 
-.table td {
-  padding: 8px;
-  line-height: 20px;
+.table th, td {
+  padding: 7px;
+  line-height: 19px;
   text-align: left;
   vertical-align: top;
   border-top: 2px solid #dddddd;
@@ -263,6 +293,7 @@ table {
 
 .table th {
   font-weight: bold;
+  text-align: left;
 }
 
 .table thead th {
@@ -282,19 +313,29 @@ table {
   border-top: 2px solid #dddddd;
 }
 
-.table .table {
-
-}
-
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th {
+	background-color: #f9f9f9;
 
 }
 
 .table-hover tbody tr:hover > td,
 .table-hover tbody tr:hover > th {
+	  background-color: #f5f5f5;
 
 }
+
+
+table tr td select{
+  width:120px;
+}
+
+
+/*
+	This styles the table on the page.
+*/
+ 
+
 
 .article{
 	margin: 9px 0px 9px 25px;
@@ -331,9 +372,6 @@ table {
 	display:inline-block;
 }
 
-.required{
-	color: red;
-}
 
 a{
 	text-decoration: none;
@@ -342,13 +380,6 @@ a{
 a:hover{
 	//background-color: #cccccc;
 	font-weight: bold;
-}
-
-.input_style{
-	border-radius: 9px;
-	height:23px;
-	border-width: 3px;
-	border-color: #999999;
 }
 
 .error{

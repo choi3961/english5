@@ -1,8 +1,8 @@
 <!-- This is sign up page to be displayed -->
-<div class = 'header'> Lectures </div>
+<div class = 'header'> </div>
+<div class = 'header'> <?=$l_title?> </div>
 <div class='center'>
-
-    <table id ="first">	
+    <table id ="lecture_list" class ='table'>	
     </table>
 
     <div id="register"></div>

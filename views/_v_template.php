@@ -16,7 +16,7 @@
         <!-- This is the interface for the pages the users could access through easily -->
         <div id="container">
             <div id='menu0'>
-                <a href='/'>Home </a> |
+                | <a href='/'>Home </a> |
                 <!-- Menu for users who are logged in -->
                 <a href='/users/signup' class = 'menu-users'>Signup</a> |
                 <a href='/users/login' class = 'menu-users'>Login</a> |
@@ -25,7 +25,7 @@
                     <a href='/posts/add' class = 'menu-posts'>Add-post</a> |
                     <a href='/posts/index' class = 'menu-posts'>Following-posts</a> |
                     <a href='/posts/mypage' class = 'menu-posts'>My-posts</a> |
-                    <a href='/posts/users' class = 'menu-posts'>Users</a> |
+                <!--    <a href='/posts/users' class = 'menu-posts'>Users</a> |-->
                 <?php endif;?>
             </div>
             <div class='greetings'>
@@ -36,13 +36,19 @@
             </div>        
             
             <div class = 'sidebar'  id='left_side'>
+                <div class="center02">
+                    <div id="best_way"></div>  
+                    <div class="space"></div>                  
+                    <div id="maxim"></div>
+
+                </div>
+
                 <div class="img"><img src="/image/book_cover001.jpg" alt='영어의 비밀' width="150"/></div>  
-                <div class="img"><img src="/image/book_cover002.jpg" alt='영어가 길어지는 10가지 이유' width="150"/></div> 
+                <div class="img"><img src="/image/book_cover002.jpg" alt='영어가 길어지는 10가지 이유' width="150"/></div>                 
             </div>
             <div class = 'sidebar' id='right_side'>
-                <div class='center'>        
+                <div class='center02'>        
                     <?php if(!$user): ?>
-
                     <div class="space"></div>                                           
                     <form method='POST' action='/users/p_login' class='form-standard'>
                         <input type='text' name='email' placeholder="이메일"><br>
@@ -54,27 +60,30 @@
                     <div>Go to <a href="/posts/mypage">myposts</a></div>
                     <div>Go to <a href="/posts/index">index</a></div>
                     <?php endif ?>
+                    <div class="space"></div>
+
+                    <div>
+                        <a href="/users/search_id">아이디/비밀번호 찾기</a>
+                    </div>  
+                    <div class="space"></div> 
+
+                    <div>
+                        <a href="/users/change_password">비밀 번호 변경 </a>
+                    </div>   
+                    <div class="space"></div>                                                             
+                    <div>
+                        <a href="/users/signup">회원 가입 </a>
+                    </div>                       
                     
                 </div>
-                <div>
-                    <a href="/users/search_id">아이디/비밀번호 찾기</a>
-                </div>  
-                <div class="space"></div> 
 
-                <div>
-                    <a href="/users/change_password">비밀 번호 변경 </a>
-                </div>   
-                <div class="space"></div>                                                             
-                <div>
-                    <a href="/users/signup">회원 가입 </a>
-                </div>   
                 <div class="img"><img src="/image/book_cover001.jpg" alt='영어의 비밀' width="150"/></div>
                 <div class="img"><img src="/image/book_cover002.jpg" alt='영어가 길어지는 10가지 이유' width="150"/></div>
             </div>
 
             <div id = 'contents'>
             	<div id='menu'>
-                    <a href='/'>Home</a> |
+                    <a href='/'>| Home</a> |
                     <a href = '/lectures/index/lec01' title="The Secret of English 영어의 비밀">강의 듣기 1</a> |  
                     <a href = '/lectures/index/lec02' title="영어가 길어지는 10가지 이유">강의 듣기 2</a> |                    
                     <a href = '/lectures/index/register' title="무료 수강 신청">수강 신청</a> |  
@@ -110,7 +119,9 @@
             <!-- footer part -->
             <div class = 'footer'> 
                 Copyright &copy; 2018 유니버스 출판 All rights are reserved.
-            </div>            
+            </div>     
+
         </div>
+        <script src="/js/maxim.js"></script> 
     </body>
 </html>

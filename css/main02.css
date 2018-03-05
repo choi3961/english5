@@ -84,96 +84,6 @@
 }
 
 /*
-	This is for the form style of the page.
-*/
-.form-standard{
-	margin-left:9px;
-}
-
-.form-standard input{
-	border-radius: 9px;
-	height:21px;
-	border-width: 3px;
-	border-color: #999999;
-}
-
-.form-standard input[type = 'submit']{
-	width:90px;
-	height: 30px;
-}
-
-.form-standard input[type]:hover{
-	background-color: #cccccc;
-}
-
-.form-standard textarea{
-	width: 475px;
-	height: 120px;
-}
-
-/*
-	This styles the table on the page.
-*/
-table {
-  max-width: 100%;
-  background-color: transparent;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/*
-	This styles the table on the page.
-*/
-.table {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.table th, 
-.table td {
-  padding: 8px;
-  line-height: 20px;
-  text-align: left;
-  vertical-align: top;
-  border-top: 2px solid #dddddd;
-}
-
-.table th {
-  font-weight: bold;
-}
-
-.table thead th {
-  vertical-align: bottom;
-}
-
-.table caption + thead tr:first-child th,
-.table caption + thead tr:first-child td,
-.table colgroup + thead tr:first-child th,
-.table colgroup + thead tr:first-child td,
-.table thead:first-child tr:first-child th,
-.table thead:first-child tr:first-child td {
-  border-top: 0;
-}
-
-.table tbody + tbody {
-  border-top: 2px solid #dddddd;
-}
-
-.table .table {
-  background-color: #ffffff;
-}
-
-.table-striped tbody > tr:nth-child(odd) > td,
-.table-striped tbody > tr:nth-child(odd) > th {
-  background-color: #f9f9f9;
-}
-
-.table-hover tbody tr:hover > td,
-.table-hover tbody tr:hover > th {
-  background-color: #f5f5f5;
-}
-
-/*
 	This is for the posts on the page.
 */
 .article{
@@ -217,12 +127,7 @@ table {
 	display:inline-block;
 }
 
-/*
-	This is for the input of the form required.
-*/
-.required{
-	color: red;
-}
+
 
 /*
 	This is for the bottom part of the page.
@@ -253,15 +158,6 @@ a:hover{
 	font-weight: bold;
 }
 
-/*
-	This is for the input style of the form on the page.
-*/
-.input_style{
-	border-radius: 9px;
-	height:23px;
-	border-width: 3px;
-	border-color: #999999;
-}
 
 /*
 	This is for the error message.

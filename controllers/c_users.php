@@ -160,15 +160,17 @@ class users_controller extends base_controller {
         //Update lecture_registered of this user into the database
 
         $q = "UPDATE users SET $data = 3 where user_id = '".$this->user->user_id."'";
-
-        //$q = "UPDATE users SET $data = 9 where email = '".$_POST['email']."'";
         DB::instance(DB_NAME)->query($q);
 
-        //echo $user->first_name;
+        // Setup view
+        $this->template->content =View::instance('v_users_result');
+        $this->template->title = "수강 신청 완료";
 
-        //"SELECT token FROM users  WHERE  AND password = '".$_POST['password']."'";
+        // Pass the result to the view.
+        echo $this->template;
+        //echo "수강 신청이 완료되었습니다!!";
 
-
+ 
 
         // Show the result of lecture registering.
         //Router::redirect('/users/lecture_register/result');

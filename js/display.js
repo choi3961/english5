@@ -1,18 +1,20 @@
 // Display lecture list
 $path = location.pathname;
+
+console.log($path.substring(16,21));
+
 if ($path.substring(16,21) ==="lec01") {
-    var url = "/xml/lecture2.xml"; 
+    var url = "/xml/lecture01.xml"; 
     var lec = "";
     fileRequest(url, lec, display01);
-    //display(data);
 }
 else if ($path.substring(16,21) ==="lec02"){
-    var url = "/xml/lectures.xml"; 
+    var url = "/xml/lecture02.xml"; 
     var lec = "";     
     fileRequest(url, lec, display01);
 }
 
-// if the substring is register in lectures/index/register
+// if the substring is register in lectures/index/register, it means the user tries to register lecture.
 else{
     var url = "/xml/question01.xml";   
     var lec = "";    
@@ -55,15 +57,16 @@ function display01(xml){
     var xmlDoc = xml.responseXML;
     var table="<tr><th>Lecture</th><th>Title</th></tr>";
     var x = xmlDoc.getElementsByTagName("lecture");
-    for (i = 0; i <x.length; i++) {
-      if( i>9 ){
-        table += "<tr><td>" + "<a href='" +  "/player/play/lec0" + i + "'>Lecture" + i + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td></tr>" ;
+    for (i = 0; i < x.length; i++) {
+        j = i+1;
+      if( j>9 ){
+        table += "<tr><td>" + "<a href='" +  "/player/play/lec0" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td></tr>" ;
       }
       else{
-        table += "<tr><td>" + "<a href='" +  "/player/play/lec00" + i + "'>Lecture" + i + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td></tr>" ;
+        table += "<tr><td>" + "<a href='" +  "/player/play/lec00" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td></tr>" ;
       }
     }
-    document.getElementById("first").innerHTML = table;
+    document.getElementById("lecture_list").innerHTML = table;
 }
 
 function register(xml){
@@ -80,11 +83,15 @@ function question(xml, lec_name){
     var x = xmlDoc.getElementsByTagName("question");     
     var num = Math.floor((Math.random() * 10) + 1);  
     var answer = prompt(x[num].children[0].childNodes[0].nodeValue);
+    answer = answer.toLowerCase();
 
 //////////////////////////////
 // if answer is correct call the server function, to say server URL, to register lecture into the database.
     if(answer === x[num].children[1].childNodes[0].nodeValue){
         location.assign("/users/lecture_register/"+lec_name);
+    }
+    else{
+        confirm("수강신청이 불가능합니다. 다시 시도하시기 바랍니다!");
     }
 
 //////////////////////////////

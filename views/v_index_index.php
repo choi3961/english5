@@ -9,7 +9,7 @@
 		
 	</div>	
 	<div class='header'>
-		하수는 외우고 고수는 이해한다!!!
+		하수는 외우고, 고수는 이해한다!!!
 	</div>	
 	<div class='header'>
 		
