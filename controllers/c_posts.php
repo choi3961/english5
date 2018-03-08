@@ -14,7 +14,7 @@ class posts_controller extends base_controller {
     // Shows a user's own posts.
     public function mypage(){
         $this->template->content = View::instance('v_posts_mypage');
-        $this->template->title = "My Page";
+        $this->template->title = "내가 한 질문";
         $q="SELECT 
             content,
             created,
@@ -39,7 +39,7 @@ class posts_controller extends base_controller {
         # Setup view
         $this->template->content = View::instance('v_posts_add');
         # title of the webpage
-        $this->template->title   = "New Post";
+        $this->template->title   = "질문하기";
 
         # Render template
         echo $this->template;
@@ -62,6 +62,52 @@ class posts_controller extends base_controller {
         # Redirect to the user's posts
         Router::redirect('/posts/mypage');
     }
+
+////////////////////////////////////////
+    # Process the add request of posting into the database.
+    public function p_attach() {
+
+//echo "hello";
+
+        
+
+        # Associate this post with this user
+        $_POST['user_id']  = $this->user->user_id;
+
+        # Unix timestamp of when this post was created / modified
+        $_POST['created']  = Time::now();
+        $_POST['modified'] = Time::now();
+
+        # Insert
+        # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
+        //DB::instance(DB_NAME)->insert('users_users', $_POST);
+
+        # Redirect to the user's posts
+        //Router::redirect('/posts/mypage');
+
+
+        # Setup insert statement
+        $sql = "INSERT INTO users_users SET content = 'hello'";
+
+ 
+        //$sql .= "content = 'hello'";
+
+        # Remove trailing comma
+        
+
+        # Perform query
+        DB::instance(DB_NAME)->query($sql);
+
+
+
+
+
+
+
+        print_r($_POST);
+    }    
+////////////////////////////////////////    
+
 
     # renders a page to update a post on
     public function update($id) {

@@ -1,5 +1,5 @@
 <!-- This displays the user's own page of posts -->
-<div class = 'header'>POSTS</div>
+<div class = 'header'>내가 한 질문</div>
 
 <?php foreach($posts as $post): ?>
 <div class = 'myposts'>
@@ -21,7 +21,7 @@
 	</div>
 	<div>
 		<form action = "/posts/remove/<?=$post['post_id']?>" method = "post" >
-			<input type = 'submit' value = 'remove' onClick = "return confirm('Will you really remove this post?');">
+			<input type = 'submit' value = 'remove' onClick = "return confirm('질문 내용을 지우시겠습니까?');">
 		</form>
 	</div>
 </div>

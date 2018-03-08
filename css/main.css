@@ -159,18 +159,11 @@ body {
 }
 
 .guts{ 
-	
-	//width:700px; 
+	min-height: 650px;
 	font-size: 17px;
 	border-style: inset;
 	border-width:5px;
 	border-color: #aaccaa;
-
-	//padding-right: 300px;
-	//padding-left: 155px;
-
-  	//margin: 0 auto;		
-	
 }
 
 .trade-mark{
@@ -254,15 +247,13 @@ body {
 .center{
 	margin: 0 auto; 
 	padding: 19px;
-	width: 500px;
-	//background-color: gray;
+	//width: 500px;
 }
 
 .center02{
 	margin: 0 auto; 
 	padding: 9px;
-	//width: 500px;
-	//background-color: gray;
+
 }
 
 .cen-cen{
@@ -339,9 +330,10 @@ table tr td select{
 
 .article{
 	margin: 9px 0px 9px 25px;
-	background-color: #dddddd;
-	width: 500px;
+	//background-color: #dddddd;
+	width: 581px;
 	padding: 0 3px 3px 10px ;
+	border: 1px solid #BFBFBF;
 }
 
 .article-control{
@@ -362,6 +354,27 @@ table tr td select{
 .article-time {
 	font-size: 15px;
 	text-align: right;
+}
+
+.article-reply{
+	font-weight: bold;
+	//border : 1px solid #bfbfbf;
+	//width : 60px;
+	cursor: pointer;
+}
+
+.article-attach{
+	font-weight: bold;
+	//border : 1px solid #bfbfbf;
+	//width : 60px;
+	cursor: pointer;
+}
+
+.article-replied{
+	font-weight: bold;
+	border : 1px solid #bfbfbf;
+	max-width : 500px;
+	cursor: pointer;
 }
 
 .myposts{

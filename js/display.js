@@ -60,10 +60,10 @@ function display01(xml){
     for (i = 0; i < x.length; i++) {
         j = i+1;
       if( j>9 ){
-        table += "<tr><td>" + "<a href='" +  "/player/play/lec0" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td></tr>" ;
+        table += "<tr><td>" + "<a href='" + "/player/play/lec0" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td></tr>" ;
       }
       else{
-        table += "<tr><td>" + "<a href='" +  "/player/play/lec00" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td></tr>" ;
+        table += "<tr><td>" + "<a href='" + "/player/play/lec00" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td></tr>" ;
       }
     }
     document.getElementById("lecture_list").innerHTML = table;

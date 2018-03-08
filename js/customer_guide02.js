@@ -1,4 +1,4 @@
-var url = "/xml/maxim.xml"; 
+var url = "/xml/customer_guide.xml"; 
 var lec = "";
 fileRequest02(url, maxim_display);
 
@@ -19,12 +19,15 @@ function fileRequest02(url, display){
 
 function maxim_display(xml){
     var xmlDoc = xml.responseXML;
-    var x = xmlDoc.getElementsByTagName("maxim");  
-    var num = Math.floor((Math.random() * x.length) + 0);  
-    var maxim = x[num].children[0].childNodes[0].nodeValue;
-    document.getElementById("best_way").innerHTML = "<div title='추후 공개됩니다.'>수능 만점 로드맵</div>";
-    document.getElementById("maxim").innerHTML = maxim;
-    console.log(num);
+    var x = xmlDoc.getElementsByTagName("guide");     
+    var customer_guide = x[0].children[0].children[0];
+
+    var ns = new XMLSerializer();
+    var guide= ns.serializeToString(customer_guide);
+
+    document.getElementById("customer_guide").innerHTML = guide;
+
+    //console.log(customer_guide);
 }  
 
 function random(){

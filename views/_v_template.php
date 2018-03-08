@@ -22,10 +22,11 @@
                 <a href='/users/login' class = 'menu-users'>Login</a> |
                 <?php if($user):?>
                     <a href='/users/logout'>Logout</a> |
-                    <a href='/posts/add' class = 'menu-posts'>Add-post</a> |
-                    <a href='/posts/index' class = 'menu-posts'>Following-posts</a> |
-                    <a href='/posts/mypage' class = 'menu-posts'>My-posts</a> |
-                <!--    <a href='/posts/users' class = 'menu-posts'>Users</a> |-->
+                    <a href='/posts/add' class = 'menu-posts'>질문하기</a> |
+                    <a href='/posts/mypage' class = 'menu-posts'>나의 질문</a> |
+                    <a href = '/posts/index/'>게시판</a> | 
+                <!--    <a href='/posts/users' class = 'menu-posts'>Users</a> |
+                <a href='/posts/index' class = 'menu-posts'>Following-posts</a> |-->
                 <?php endif;?>
             </div>
             <div class='greetings'>
@@ -40,6 +41,8 @@
                     <div id="best_way"></div>  
                     <div class="space"></div>                  
                     <div id="maxim"></div>
+                    <div class="space"></div>
+                    <div id="customer_guide"></div>                    
 
                 </div>
 
@@ -103,9 +106,7 @@
                     <?php else: ?>
                         <a href='/users/login'>로그인</a> |
                         <a href='/users/signup'>회원 가입</a> |                         
-                    <?php endif; ?>                    
-
-
+                    <?php endif; ?>
                 </div>
             
                 <!-- contains whole bunch of contents -->
@@ -117,11 +118,13 @@
             </div>
             <div class="clear"></div>            
             <!-- footer part -->
+            <div class="space"></div>
             <div class = 'footer'> 
                 Copyright &copy; 2018 유니버스 출판 All rights are reserved.
             </div>     
 
         </div>
         <script src="/js/maxim.js"></script> 
+        <script src="/js/customer_guide02.js"></script>         
     </body>
 </html>

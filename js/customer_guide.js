@@ -1,4 +1,3 @@
-//alert(navigator.userAgent);
 console.log(navigator.userAgent);
 
 var str = navigator.userAgent;
