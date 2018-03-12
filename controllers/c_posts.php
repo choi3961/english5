@@ -23,6 +23,8 @@ class posts_controller extends base_controller {
             FROM posts
             WHERE user_id = ".$this->user->user_id;
 
+        //$q.= "ORDER BY created DESC";   // not working when it is with where clause.
+
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
 
@@ -65,47 +67,61 @@ class posts_controller extends base_controller {
 
 ////////////////////////////////////////
     # Process the add request of posting into the database.
-    public function p_attach() {
+    public function p_attach($created) {
 
-//echo "hello";
+        // A tag should be attached for the replied answer from posts' created column
+        //$q = "SELECT created from posts
+         //       where user_id = ".$user_id_followed;
+        //$tag = DB::instance(DB_NAME)->select_rows($q);
 
-        
+        //echo "here==========";
+        //print_r($tag);
+
 
         # Associate this post with this user
         $_POST['user_id']  = $this->user->user_id;
 
+        //$_POST['user_id_followed']  = $user_id_followed;
+
+        $_POST['tag']  = $created;
+
         # Unix timestamp of when this post was created / modified
         $_POST['created']  = Time::now();
-        $_POST['modified'] = Time::now();
+        //$_POST['modified'] = Time::now();
 
         # Insert
         # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
-        //DB::instance(DB_NAME)->insert('users_users', $_POST);
+        DB::instance(DB_NAME)->insert('users_users', $_POST);
 
         # Redirect to the user's posts
         //Router::redirect('/posts/mypage');
+        //print_r($_POST);
+    }  
 
+    # Set up the followers of a user.
+    public function follow($user_id_followed) {
+        # Prepare the data array to be inserted
+        $data = Array(
+            "created" => Time::now(),
+            "user_id" => $this->user->user_id,
+            "user_id_followed" => $user_id_followed
+            );
+        # Do the insert
+        DB::instance(DB_NAME)->insert('users_users', $data);
 
-        # Setup insert statement
-        $sql = "INSERT INTO users_users SET content = 'hello'";
+        # Send them back
+        Router::redirect("/posts/users");
+    }
 
- 
-        //$sql .= "content = 'hello'";
+    # Unset the state of following from a user
+    public function unfollow($user_id_followed) {
+        # Delete this connection
+        $where_condition = 'WHERE user_id = '.$this->user->user_id.' AND user_id_followed = '.$user_id_followed;
+        DB::instance(DB_NAME)->delete('users_users', $where_condition);
 
-        # Remove trailing comma
-        
-
-        # Perform query
-        DB::instance(DB_NAME)->query($sql);
-
-
-
-
-
-
-
-        print_r($_POST);
-    }    
+        # Send them back
+        Router::redirect("/posts/users");
+    }      
 ////////////////////////////////////////    
 
 
@@ -119,7 +135,6 @@ class posts_controller extends base_controller {
             content
             FROM posts
             WHERE post_id = ".$id;
-
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
 
@@ -152,46 +167,13 @@ class posts_controller extends base_controller {
     }
 
     # shows the posts which the user follows the posters of
-    public function index() {
+    public function index($num = null) {
         # Set up the View
         $this->template->content = View::instance('v_posts_index');
 
         $this->template->title   = "게시판";
 
-        # Build the query to show the posts which the user follows the posters of
-        $q="SELECT 
-            posts.content,
-            posts.created,
-            posts.user_id,
-
-            users.first_name,
-            users.last_name
-            FROM posts
-
-            INNER JOIN users
-                ON posts.user_id = users.user_id";
-
-/*************
-        $q="SELECT 
-            posts.content,
-            posts.created,
-            posts.user_id,
-            users_users.user_id,
-            users.first_name,
-            users.last_name
-            FROM posts
-            INNER JOIN users_users
-                ON posts.user_id = users_users.user_id_followed
-            INNER JOIN users
-                ON posts.user_id = users.user_id
-            WHERE users_users.user_id = ".$this->user->user_id;    
-****************/                    
-
-        # Run the query
-        $posts = DB::instance(DB_NAME)->select_rows($q);
- 
-        # Pass data to the View
-        $this->template->content->posts = $posts;
+        $this->template->content->num_div = $num;
 
         # Render the View
         echo $this->template;
@@ -231,29 +213,5 @@ class posts_controller extends base_controller {
         echo $this->template;
     }
 
-    # Set up the followers of a user.
-    public function follow($user_id_followed) {
-        # Prepare the data array to be inserted
-        $data = Array(
-            "created" => Time::now(),
-            "user_id" => $this->user->user_id,
-            "user_id_followed" => $user_id_followed
-            );
-        # Do the insert
-        DB::instance(DB_NAME)->insert('users_users', $data);
-
-        # Send them back
-        Router::redirect("/posts/users");
-    }
-
-    # Unset the state of following from a user
-    public function unfollow($user_id_followed) {
-        # Delete this connection
-        $where_condition = 'WHERE user_id = '.$this->user->user_id.' AND user_id_followed = '.$user_id_followed;
-        DB::instance(DB_NAME)->delete('users_users', $where_condition);
-
-        # Send them back
-        Router::redirect("/posts/users");
-    }
 }
 ?>

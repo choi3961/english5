@@ -18,15 +18,17 @@
             <div id='menu0'>
                 | <a href='/'>Home </a> |
                 <!-- Menu for users who are logged in -->
-                <a href='/users/signup' class = 'menu-users'>Signup</a> |
-                <a href='/users/login' class = 'menu-users'>Login</a> |
                 <?php if($user):?>
                     <a href='/users/logout'>Logout</a> |
                     <a href='/posts/add' class = 'menu-posts'>질문하기</a> |
                     <a href='/posts/mypage' class = 'menu-posts'>나의 질문</a> |
-                    <a href = '/posts/index/'>게시판</a> | 
+                    <a href = '/posts/index/1'>게시판</a> | 
+                    <a href='/users/profile'>My page  </a> |
                 <!--    <a href='/posts/users' class = 'menu-posts'>Users</a> |
                 <a href='/posts/index' class = 'menu-posts'>Following-posts</a> |-->
+                <?php else:?>
+                    <a href='/users/signup' class = 'menu-users'>Signup</a> |
+                    <a href='/users/login' class = 'menu-users'>Login</a> |                
                 <?php endif;?>
             </div>
             <div class='greetings'>
@@ -43,11 +45,9 @@
                     <div id="maxim"></div>
                     <div class="space"></div>
                     <div id="customer_guide"></div>                    
-
                 </div>
-
                 <div class="img"><img src="/image/book_cover001.jpg" alt='영어의 비밀' width="150"/></div>  
-                <div class="img"><img src="/image/book_cover002.jpg" alt='영어가 길어지는 10가지 이유' width="150"/></div>                 
+                <div class="img"><img src="/image/book_cover002.jpg" alt='영어가 길어지는 10가지 이유' width="150"/></div>          
             </div>
             <div class = 'sidebar' id='right_side'>
                 <div class='center02'>        
@@ -59,9 +59,9 @@
                         <input type='submit' value='로그인'><br>
                     </form>
                     <?php else: ?>
-                    <div>Go to <a href="/posts/add">post</a></div>
-                    <div>Go to <a href="/posts/mypage">myposts</a></div>
-                    <div>Go to <a href="/posts/index">index</a></div>
+                    <div>Go to <a href="/posts/add">질문하기</a></div>
+                    <div>Go to <a href="/posts/mypage">나의 질문</a></div>
+                    <div>Go to <a href="/posts/index/1">게시판</a></div>
                     <?php endif ?>
                     <div class="space"></div>
 
@@ -76,8 +76,7 @@
                     <div class="space"></div>                                                             
                     <div>
                         <a href="/users/signup">회원 가입 </a>
-                    </div>                       
-                    
+                    </div>
                 </div>
 
                 <div class="img"><img src="/image/book_cover001.jpg" alt='영어의 비밀' width="150"/></div>
@@ -88,10 +87,10 @@
             	<div id='menu'>
                     <a href='/'>| Home</a> |
                     <a href = '/lectures/index/lec01' title="The Secret of English 영어의 비밀">강의 듣기 1</a> |  
-                    <a href = '/lectures/index/lec02' title="영어가 길어지는 10가지 이유">강의 듣기 2</a> |                    
+                    <a href = '/lectures/index/lec02' title="영어가 길어지는 10가지 이유">강의 듣기 2</a> |
                     <a href = '/lectures/index/register' title="무료 수강 신청">수강 신청</a> |  
                     <a href = '/purchase/index/'>도서 구매</a> |  
-                    <a href = '/posts/index/'>게시판</a> |                      
+                    <a href = '/posts/index/1'>게시판</a> |                      
 
 <!--                <a href = '/posts/mypage/'> myposts </a> | 
                     <a href="/posts/index">index </a> |
@@ -101,7 +100,6 @@
                     <!-- Menu for users who are logged in -->
                     <?php if($user): ?>
                     <a href='/users/logout'>Logout </a> |
-                    <a href='/users/profile'>Profile  </a> |
                     <!-- Menu options for users who are not logged in -->
                     <?php else: ?>
                         <a href='/users/login'>로그인</a> |
@@ -122,7 +120,6 @@
             <div class = 'footer'> 
                 Copyright &copy; 2018 유니버스 출판 All rights are reserved.
             </div>     
-
         </div>
         <script src="/js/maxim.js"></script> 
         <script src="/js/customer_guide02.js"></script>         
