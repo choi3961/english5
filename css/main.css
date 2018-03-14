@@ -14,7 +14,6 @@ body {
 }
 
 #container{
-
   margin: 0 auto;
   width: 990px;
 }
@@ -225,6 +224,11 @@ body {
 .form-standard textarea{
 	width: 475px;
 	height: 240px;
+	background-color: #f3f3f3;
+}
+
+textarea{
+	background-color: #f3f3f3;
 }
 
 /*
@@ -284,7 +288,6 @@ body {
 
 .table th {
   font-weight: bold;
-  text-align: left;
 }
 
 .table thead th {
@@ -304,10 +307,23 @@ body {
   border-top: 2px solid #dddddd;
 }
 
-.table-striped tbody > tr:nth-child(odd) > td,
-.table-striped tbody > tr:nth-child(odd) > th {
+.table-striped tbody > tr:nth-child(odd) > th{
+	font-size: 23px;
+	padding: 9px;
+	line-height: 19px;
+	text-align: left;
+	vertical-align: bottom;
+	border-top: 2px solid #dddddd;	
 	background-color: #f9f9f9;
+}
 
+.table-striped tbody > tr:nth-child(odd) > td{
+	padding: 9px;
+	line-height: 19px;
+	text-align: left;
+	vertical-align: bottom;
+	border-top: 2px solid #dddddd;	
+	background-color: #f9f9f9;
 }
 
 .table-hover tbody tr:hover > td,
@@ -325,12 +341,9 @@ table tr td select{
 /*
 	This styles the table on the page.
 */
- 
-
-
-.article{
+ .article{
 	margin: 9px 0px 9px 25px;
-	//background-color: #dddddd;
+	//background-color: #eeeeee;
 	width: 581px;
 	padding: 0 3px 3px 10px ;
 	border: 1px solid #BFBFBF;
@@ -380,7 +393,7 @@ table tr td select{
 
 .myposts{
 	margin: 9px 9px 9px 19px;
-	background-color: #dddddd;
+	background-color: #f3f3f3;
 	width: 570px;
 	padding: 0 3px 3px 10px ;
 	display:inline-block;
@@ -533,4 +546,8 @@ a:link{
 
 .space{
 	margin : 10px 0 0 0;
+}
+
+.space05{
+	margin : 5px 0 0 0;
 }

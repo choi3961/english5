@@ -75,9 +75,7 @@
 
 		<!-- $posts[$num]['first_name']  This phrase is not necessary    -->
 
-		<?php $content = nl2br($post['content']); ?>
-		
-		
+		<?php $content = nl2br($post['content']); ?>	
 		<div class = 'article'>
 			<article>
 			    <div class = 'article-header'><?=$post['first_name']?>님의 질문:</div>

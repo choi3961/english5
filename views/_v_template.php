@@ -23,8 +23,8 @@
                     <a href='/posts/add' class = 'menu-posts'>질문하기</a> |
                     <a href='/posts/mypage' class = 'menu-posts'>나의 질문</a> |
                     <a href = '/posts/index/1'>게시판</a> | 
-                    <a href='/users/profile'>My page  </a> |
-                <!--    <a href='/posts/users' class = 'menu-posts'>Users</a> |
+                <!--    <a href='/users/profile'>My Page  </a> |
+                    <a href='/posts/users' class = 'menu-posts'>Users</a> |
                 <a href='/posts/index' class = 'menu-posts'>Following-posts</a> |-->
                 <?php else:?>
                     <a href='/users/signup' class = 'menu-users'>Signup</a> |
@@ -55,7 +55,8 @@
                     <div class="space"></div>                                           
                     <form method='POST' action='/users/p_login' class='form-standard'>
                         <input type='text' name='email' placeholder="이메일"><br>
-                        <input type='password' name='password' placeholder="비밀 번호"><br><br>
+                        <input type='password' name='password' placeholder="비밀 번호"><br>
+                        <div class="space05"></div> 
                         <input type='submit' value='로그인'><br>
                     </form>
                     <?php else: ?>
@@ -63,17 +64,15 @@
                     <div>Go to <a href="/posts/mypage">나의 질문</a></div>
                     <div>Go to <a href="/posts/index/1">게시판</a></div>
                     <?php endif ?>
-                    <div class="space"></div>
-
+                    <div class="space05"></div>
                     <div>
-                        <a href="/users/search_id">아이디/비밀번호 찾기</a>
+                        <a href="/users/search_id">I D / 비밀번호 찾기</a>
                     </div>  
-                    <div class="space"></div> 
-
+                    <div class="space05"></div> 
                     <div>
                         <a href="/users/change_password">비밀 번호 변경 </a>
                     </div>   
-                    <div class="space"></div>                                                             
+                    <div class="space05"></div>                                                             
                     <div>
                         <a href="/users/signup">회원 가입 </a>
                     </div>
@@ -89,7 +88,7 @@
                     <a href = '/lectures/index/lec01' title="The Secret of English 영어의 비밀">강의 듣기 1</a> |  
                     <a href = '/lectures/index/lec02' title="영어가 길어지는 10가지 이유">강의 듣기 2</a> |
                     <a href = '/lectures/index/register' title="무료 수강 신청">수강 신청</a> |  
-                    <a href = '/purchase/index/'>도서 구매</a> |  
+                    <!--<a href = '/purchase/index/'>도서 구매</a> |  -->
                     <a href = '/posts/index/1'>게시판</a> |                      
 
 <!--                <a href = '/posts/mypage/'> myposts </a> | 
@@ -118,7 +117,7 @@
             <!-- footer part -->
             <div class="space"></div>
             <div class = 'footer'> 
-                Copyright &copy; 2018 유니버스 출판 All rights are reserved.
+                Copyright &copy; 2018 English English All rights are reserved.
             </div>     
         </div>
         <script src="/js/maxim.js"></script> 

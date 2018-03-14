@@ -1,7 +1,7 @@
 // Display lecture list
 $path = location.pathname;
 
-console.log($path.substring(16,21));
+//console.log($path.substring(16,21));
 
 if ($path.substring(16,21) ==="lec01") {
     var url = "/xml/lecture01.xml"; 

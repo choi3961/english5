@@ -5,7 +5,7 @@
 <div class = 'myposts'>
 	<article>
 	    <div class = 'article-header'>You posted:</div>
-	    <div class = 'article-content'><p><?=$post['content']?></p></div>
+	    <div class = 'article-content'><p><?=nl2br($post['content'])?></p></div>
 	    <div class = 'article-time'>
 	    	<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
 	        	<?=Time::display($post['created'])?>

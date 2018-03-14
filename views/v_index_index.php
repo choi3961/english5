@@ -9,8 +9,17 @@
 		
 	</div>	
 	<div class='header'>
-		하수는 외우고, 고수는 이해한다!!!
+		영어!!!
 	</div>	
+	<div class="space"></div>	
+	<div class='header'>
+		긴 문장을 잘하면 잘하고,
+	</div>	
+	<div class="space"></div>
+	<div class='header'>
+		긴 문장을 못하면 못한다.
+	</div>	
+			
 	<div class='header'>
 		
 	</div>	
