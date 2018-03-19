@@ -45,13 +45,20 @@
 	</div>
 
 	<div id = 'guts_footer'>
-		<div>
-			Sign up is free!! 회원 가입하시기 바랍니다!!
-			<div class="space"></div>
-			<form action = '/users/signup' class = 'form-standard'>
-				<input type = 'submit' value = 'sign up'>
-			</form>
-		</div>
+        <?php if(!$user): ?>	
+			<div>
+				Sign up is free!! 회원 가입하시기 바랍니다!!
+				<div class="space"></div>
+				<form action = '/users/signup' class = 'form-standard'>
+					<input type = 'submit' value = 'sign up'>
+				</form>
+			</div>
+		<?php else: ?>
+			<div class="guts_footer02">
+				긴 문장을 모르면 영어의 늪에 빠진다.
+			</div>			
+
+		<?php endif; ?>
 		<script src="/js/customer_guide.js"></script>
 	</div>
 

@@ -1,0 +1,19 @@
+2018-03-16 16:21:42 - INFO --> -------------------------- 
+2018-03-16 16:21:42 - INFO --> Controller/Method: users/p_signup 
+2018-03-16 16:21:42 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@harvardweb.biz 
+2018-03-16 16:21:42 - INFO --> From: English5 (webmaster@harvardweb.biz) 
+2018-03-16 16:21:42 - INFO --> To: English5 (aaa),  
+2018-03-16 16:21:42 - INFO --> CC:  
+2018-03-16 16:21:42 - INFO --> BCC:  
+2018-03-16 16:21:42 - INFO --> Subject: Message from SQUAWK 
+2018-03-16 16:21:42 - INFO --> Body: <!-- This is the mail format sent to the new user when signed up. -->
+<html>
+	<bocy>
+		<div>
+			This is the mail from SQUAWK. 
+			You are registered as a member.
+		</div>
+	</bocy>
+</html>
+ 
+2018-03-16 16:21:44 - INFO --> FAILED TO SEND EMAIL 

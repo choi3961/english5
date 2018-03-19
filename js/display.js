@@ -55,16 +55,35 @@ function fileRequest(url, lec_name, display){
 function display01(xml){
     var i;
     var xmlDoc = xml.responseXML;
-    var table="<tr><th>Lecture</th><th>Title</th></tr>";
+    var table="<tr><th>Lecture</th><th>Title</th><th><span>천천히 처음부터 수강 바랍니다.</span></th></tr>";
     var x = xmlDoc.getElementsByTagName("lecture");
+    var open = 4;
     for (i = 0; i < x.length; i++) {
         j = i+1;
-      if( j>9 ){
-        table += "<tr><td>" + "<a href='" + "/player/play/lec0" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td></tr>" ;
-      }
-      else{
-        table += "<tr><td>" + "<a href='" + "/player/play/lec00" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td></tr>" ;
-      }
+
+        if (i<open) {
+          if( j>9 ){
+            table += "<tr><td>" + "<a href='" + "/player/play/lec0" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td><td>open</td></tr>" ;
+          }
+          else{
+            table += "<tr><td>" + "<a href='" + "/player/play/lec00" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td><td>open</td></tr>" ;
+          }            
+        }
+
+
+        else{
+          if( j>9 ){
+            table += "<tr><td>" + "<a href='" + "/player/play/lec0" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td><td>not yet</td></tr>" ;
+          }
+          else{
+            table += "<tr><td>" + "<a href='" + "/player/play/lec00" + j + "'>Lecture" + j + "</a>" + "</td><td>" + x[i].children[0].childNodes[0].nodeValue + "</td><td>not yet</td></tr>" ;
+          }
+
+        }
+
+
+
+
     }
     document.getElementById("lecture_list").innerHTML = table;
 }

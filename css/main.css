@@ -75,7 +75,6 @@ body {
 	width: 813px;
 	height: 50px;
 	left: 150px;
-	
 	display: block;
 }
 
@@ -128,6 +127,18 @@ body {
 #left_side{
   	float: left;
 	border: 1px solid #cccccc;
+}
+
+#best_way{
+	//background-color: red;
+	color: #ff0000;
+	font-size: 14px;
+}
+
+#best_way:hover{
+	//background-color: red;
+	color: #ff0000;
+	font-size: 14px;
 }
 
 #right_side{
@@ -315,6 +326,12 @@ textarea{
 	vertical-align: bottom;
 	border-top: 2px solid #dddddd;	
 	background-color: #f9f9f9;
+}
+
+.table-striped tbody > tr:nth-child(odd) > th span{
+	font-size: 13px;
+	color: #ff0000;
+
 }
 
 .table-striped tbody > tr:nth-child(odd) > td{
@@ -509,6 +526,21 @@ a:link{
 	border: 1px solid #cccccc;	
 }
 
+/*
+	This is for the bottom part of the page.
+*/
+.guts_footer02{
+	color: #ff0000;
+
+	height: 100px;
+	//z-index: 100;
+	//background-color: #BCCAB9;
+
+	text-align: center;
+	font-size: 29px;
+	//border: 1px solid #cccccc;	
+}
+
 .num-nav{
 	margin: 10px auto;
 	//background-color: red;
@@ -551,3 +583,4 @@ a:link{
 .space05{
 	margin : 5px 0 0 0;
 }
+

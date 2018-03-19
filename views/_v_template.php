@@ -41,6 +41,7 @@
             <div class = 'sidebar'  id='left_side'>
                 <div class="center02">
                     <div id="best_way"></div>  
+                    <div id='explain'></div>
                     <div class="space"></div>                  
                     <div id="maxim"></div>
                     <div class="space"></div>
@@ -59,6 +60,9 @@
                         <div class="space05"></div> 
                         <input type='submit' value='로그인'><br>
                     </form>
+                    <div>
+                        <a href="/users/signup">회원 가입 </a>
+                    </div>                    
                     <?php else: ?>
                     <div>Go to <a href="/posts/add">질문하기</a></div>
                     <div>Go to <a href="/posts/mypage">나의 질문</a></div>
@@ -73,9 +77,7 @@
                         <a href="/users/change_password">비밀 번호 변경 </a>
                     </div>   
                     <div class="space05"></div>                                                             
-                    <div>
-                        <a href="/users/signup">회원 가입 </a>
-                    </div>
+
                 </div>
 
                 <div class="img"><img src="/image/book_cover001.jpg" alt='영어의 비밀' width="150"/></div>

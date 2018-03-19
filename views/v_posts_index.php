@@ -51,6 +51,7 @@
         $replys = DB::instance(DB_NAME)->select_rows($q);
 ?>
 
+<!--
 <div class = 'num-nav'>
 	<?php foreach ($posts as $key):?>
 		<?php if ($num2%$num_knife == 0):?>
@@ -65,7 +66,7 @@
 
 	<a href="/posts/index/<?=$temp2 ?>"> &#60;<?= $temp2; ?>&#62; </a>			 	 
 </div>
-<!--    =========== -->
+    =========== -->
 <?php foreach($posts as $post): ?>
 
 	<!-- 5*0 < A part(or 1, 2, 3, 4, 5) <= 5*1  -->
@@ -112,6 +113,7 @@
 	<?php $num++; ?>
 <?php endforeach; ?>
 
+<!-- 
 <div class = 'num-nav'>
 	<?php foreach ($posts as $key):?>
 		<?php if ($num3%$num_knife == 0):?>
@@ -126,7 +128,7 @@
 
 	<a href="/posts/index/<?=$temp2 ?>"> &#60;<?= $temp2; ?>&#62; </a>			 	 
 </div>
-
+-->
 <script src="/js/reply.js"></script>
 
 

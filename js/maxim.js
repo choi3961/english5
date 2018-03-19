@@ -22,8 +22,9 @@ function maxim_display(xml){
     var x = xmlDoc.getElementsByTagName("maxim");  
     var num = Math.floor((Math.random() * x.length) + 0);  
     var maxim = x[num].children[0].childNodes[0].nodeValue;
-    document.getElementById("best_way").innerHTML = "<div title='추후 공개됩니다.'>수능 만점 로드맵</div>";
+    document.getElementById("best_way").innerHTML = "수능 영어 만점 로드맵";
     document.getElementById("maxim").innerHTML = maxim;
+    document.getElementById("explain").innerHTML = "추후 공개됩니다.";
     console.log(num);
 }  
 
