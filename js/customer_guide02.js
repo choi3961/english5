@@ -21,13 +21,15 @@ function maxim_display(xml){
     var xmlDoc = xml.responseXML;
     var x = xmlDoc.getElementsByTagName("guide");     
     var customer_guide = x[0].children[0].children[0];
+    var customer_guide02 = x[0].children[0].children[1];
 
     var ns = new XMLSerializer();
-    var guide= ns.serializeToString(customer_guide);
+    var guide = ns.serializeToString(customer_guide);
+    var guide02 = ns.serializeToString(customer_guide02);
 
-    document.getElementById("customer_guide").innerHTML = guide;
+    document.getElementById("customer_guide").innerHTML = guide + guide02;
 
-    //console.log(customer_guide);
+    console.log(guide02);
 }  
 
 function random(){

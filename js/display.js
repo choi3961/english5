@@ -57,7 +57,7 @@ function display01(xml){
     var xmlDoc = xml.responseXML;
     var table="<tr><th>Lecture</th><th>Title</th><th><span>천천히 처음부터 수강 바랍니다.</span></th></tr>";
     var x = xmlDoc.getElementsByTagName("lecture");
-    var open = 4;
+    var open = 6;
     for (i = 0; i < x.length; i++) {
         j = i+1;
 

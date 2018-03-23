@@ -31,8 +31,10 @@
                     <a href='/users/login' class = 'menu-users'>Login</a> |                
                 <?php endif;?>
             </div>
+            <div id="maxim03">영어 잘할 수 있습니다.</div>
             <div class='greetings'>
                 <?php if($user) echo "환영합니다 $user->first_name 회원님"; ?>
+                <?php if(!$user) echo "반갑습니다."; ?>
             </div>            
             <div class = 'header01'>
                 <a href="/">English English</a>
